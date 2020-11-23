@@ -79,7 +79,7 @@ Page {
             Label {
                 x: Theme.paddingLarge
                 width: parent.width - 2*x
-                text: qsTr("The cookie manager works by editing the /home/nemo/.mozilla/mozembed/cookies.sqlite database. All changes need the browser to be restarted in order to take effect.")
+                text: qsTr("The cookie manager works by editing the $HOME/.mozilla/mozembed/cookies.sqlite database. All changes need the browser to be restarted in order to take effect.")
                 color: Theme.primaryColor
                 wrapMode: Text.Wrap
                 font.pixelSize: Theme.fontSizeMedium

@@ -18,7 +18,13 @@ from subprocess import check_output
 
 #APP_DIR = '/opt/sdk/harbour-' + APP_NAME + '/usr/share/harbour-' + APP_NAME + '/qml/python''
 
-CONFIG_HOME_DIR = '/home/nemo/.config/harbour-' + APP_NAME
+#CONFIG_HOME_DIR = '/home/nemo/.config/harbour-' + APP_NAME
+#doh HOME_DIR = os.environ['HOME']
+HOME_DIR = '/home/defaultuser'
+if not os.path.isdir(HOME_DIR):
+  HOME_DIR = '/home/nemo'
+                                        
+CONFIG_HOME_DIR = HOME_DIR + '/.config/harbour-' + APP_NAME          
 CONFIG_ETC_DIR = '/etc'
 
 CONFIG_ETC_PATH = CONFIG_ETC_DIR + '/' + APP_NAME + '.conf'

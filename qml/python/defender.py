@@ -8,7 +8,9 @@ import datetime
 
 APP_NAME = 'defender'
 
-CONFIG_HOME_DIR = '/home/nemo/.config/harbour-' + APP_NAME
+#CONFIG_HOME_DIR = '/home/nemo/.config/harbour-' + APP_NAME
+HOME_DIR = os.environ['HOME']
+CONFIG_HOME_DIR = HOME_DIR + '/.config/harbour-' + APP_NAME
 CONFIG_ETC_DIR = '/etc'
 
 CONFIG_ETC_PATH = CONFIG_ETC_DIR + '/'  + APP_NAME + '.conf'
@@ -17,7 +19,7 @@ CONFIG_HOME_PATH = CONFIG_HOME_DIR + '/'  + APP_NAME + '.conf'
 UPDATE_FILE_PATH = CONFIG_HOME_DIR + '/' + 'update'
 LOGFILE_LAST = '/var/log/'+ APP_NAME +'_last.json'
 
-cookies_path = '/home/nemo/.mozilla/mozembed/cookies.sqlite'
+cookies_path = HOME_DIR + '/.mozilla/mozembed/cookies.sqlite'
 
 def initialize():
     if not os.path.exists(CONFIG_HOME_DIR):

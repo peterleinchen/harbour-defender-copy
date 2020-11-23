@@ -1,9 +1,12 @@
 [Unit]
 Description=Updates Defender hosts file whenever requested
 Documentation= man:systemd.path
+After=sailfish-unlock-agent
+After=pre-user-session.target
 
 [Path]
 PathExists=/home/nemo/.config/harbour-defender/update
+PathExists=/home/defaultuser/.config/harbour-defender/update
 
 [Install]
-WantedBy=multi-user.target 
+WantedBy=user-session.target 
